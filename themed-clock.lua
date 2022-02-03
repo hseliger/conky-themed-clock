@@ -1,7 +1,7 @@
 --[[
   Themed analog clock by HGS
   Written: 3 February 2022, 13:25 CET by Hendrik G. Seliger (github@hseliger.eu)
-  Last changes: 3 February 2022, 16:08 CET by Hendrik G. Seliger (github@hseliger.eu)
+  Last changes: 3 February 2022, 20:24 CET by Hendrik G. Seliger (github@hseliger.eu)
   This one should use svg graphics for cairo-clock and render
   them as a clock using conky.
 ]]
@@ -70,7 +70,9 @@ function conky_main()
   -- file path for svg files
   local f_path
   local dirname  = debug.getinfo(1).source:match("@?(.*/)")
-
+  if dirname==nil then
+    dirname="./"
+  end
   local cs=cairo_xlib_surface_create(conky_window.display,conky_window.drawable,conky_window.visual, conky_window.width,conky_window.height)
   local cr=cairo_create(cs)
 

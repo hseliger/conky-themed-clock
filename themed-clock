@@ -27,7 +27,7 @@ conky.config = {
 	minimum_width = 200,
   minimum_height = 200,
 	-- maximum_width = 200,
-	alignment = 'bottom_right',
+	alignment = 'middle_right',
 	gap_x = 0,
 	gap_y = 0,
 
@@ -41,7 +41,7 @@ conky.config = {
 	default_outline_color = 'white',
 	default_color = 'white',
 
-	lua_load = '/home/hank/.conky/HGS/themed-clock.lua',
+	lua_load = 'themed-clock.lua',
 	lua_draw_hook_post = 'main',
 
 };
